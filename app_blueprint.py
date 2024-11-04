@@ -6,4 +6,3 @@ def h(n):
 @blueprint.route('/boom')
 def he():
     return 'boom'
-# test
