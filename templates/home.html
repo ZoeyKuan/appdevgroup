@@ -3,21 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>FlaskApp</title>
-    <style>
-        nav a {
-            color: #d64161;
-            font-size: 3em;
-            margin-left: 50px;
-            text-decoration: none;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}">
 </head>
 <body>
-    <nav>
-        <a href="/home.html">FlaskApp</a>
-        <a href="faq.html">About</a>
-    </nav>
-    <hr>
+    <ul>
+        <li><a href ="/home.html">FlaskApp</a></li>
+        <li><a href="/faq.html">About</a></li>
+        <li><a href="/calendar.html">Calendar</a></li>
+    </ul>
+
     <div class="content">
         {% block content %} {% endblock %}
     </div>
