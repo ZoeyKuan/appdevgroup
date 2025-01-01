@@ -1,22 +1,34 @@
-{% extends 'home.html' %}
-
-{% block content %}
+<!doctype html>
+<html lang="en">
 <head>
-<title>Calendar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static'), filename = 'url_for/style.html') }}">
 </head>
 <body>
+ {% include "navbar.html" %}
+ {% block content %}
+ {% endblock %}
+
 <div class="modal-content">
-<div class="modal-header">
-<h2>Receipe of the Day</h2>
-    <h2>Today's Receipe: {{ today }}</h2>
+    <div class="modal-header">
+    <h2>Receipe of the Day</h2>
+        <h2>Today's Receipe: {{ today }}</h2>
+    </div>
+    <div class="modal-body">
+        <p><strong>Receipe:</strong> {{ message }} </p>
+        <input type="submit" href="/add" value="Edit" class="btn btn-danger" onclick="return confirm('Are you sure you want to change our receipe">
+        <input type="submit" href="/delete" value="Delete" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete our receipe">
+    </div>
 </div>
-<div class="modal-body">
-    <p><strong>Receipe:</strong> {{ message }} </p>
-    <input type="submit" href="/add" value="Edit" class="btn btn-danger" onclick="return confirm('Are you sure you want to change our receipe">
-    <input type="submit" href="/delete" value="Delete" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete our receipe">
 
-</div>
+<!-- bootstrap javascript-->
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!--add ur javascript here-->
 
-</div>
 </body>
+</html>
