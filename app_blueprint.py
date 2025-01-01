@@ -1,3 +1,4 @@
+# UNUSED AND OLD VERSION OF FLASK
 from flask import Blueprint, render_template
 blueprint = Blueprint('blueprint_blueprint', __name__)
 @blueprint.route('/<n>')
