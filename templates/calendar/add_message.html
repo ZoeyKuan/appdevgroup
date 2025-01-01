@@ -1,0 +1,17 @@
+{{% extend 'calendar.html' %}}
+
+{{% block content %}}
+<head>
+<title>Add/Edit Receipes</title>
+</head>
+<body>
+<h1>Add/Edit a Receipe</h1>
+<form method="POST">
+        <label for="date">Date (YYYY-MM-DD):</label><br>
+        <input type="date" id="date" name="date" required><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" required></textarea><br><br>
+        <button type="submit">Save</button>
+</form>
+<a href="/">Back to Home></a>
+</body>

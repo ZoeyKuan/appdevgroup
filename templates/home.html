@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlaskApp</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}">
+</head>
+<body>
+    <ul>
+        <li><a href ="/home.html">FlaskApp</a></li>
+        <li><a href="/faq.html">About</a></li>
+        <li><a href="/calendar.html">Calendar</a></li>
+    </ul>
+
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>

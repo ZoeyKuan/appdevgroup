@@ -1,0 +1,22 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<head>
+<title>Calendar</title>
+    <link rel="stylesheet" href="{{ url_for('static'), filename = 'url_for/style.html') }}">
+</head>
+<body>
+<div class="modal-content">
+<div class="modal-header">
+<h2>Receipe of the Day</h2>
+    <h2>Today's Receipe: {{ today }}</h2>
+</div>
+<div class="modal-body">
+    <p><strong>Receipe:</strong> {{ message }} </p>
+    <input type="submit" href="/add" value="Edit" class="btn btn-danger" onclick="return confirm('Are you sure you want to change our receipe">
+    <input type="submit" href="/delete" value="Delete" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete our receipe">
+
+</div>
+
+</div>
+</body>
